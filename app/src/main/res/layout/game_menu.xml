@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"> //View Game_Menu
+
+    <Button
+        android:id="@+id/game1_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="209dp"
+        android:text="Game 1" />
+
+    <Button
+        android:id="@+id/game2_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="Game 2"
+        android:layout_below="@+id/game1_button"
+        android:layout_alignStart="@+id/game1_button" />
+
+    <Button
+        android:id="@+id/game3_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/game2_button"
+        android:layout_below="@+id/game2_button"
+        android:layout_marginTop="13dp"
+        android:text="Game 3" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/game3_button"
+        android:layout_marginBottom="21dp"
+        android:text="Back" />
+</RelativeLayout>
