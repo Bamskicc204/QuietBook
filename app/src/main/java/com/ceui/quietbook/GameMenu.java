@@ -20,14 +20,14 @@ public class GameMenu extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_menu);
-        Log.d(TAG, "onCreate: Starting.");
+        Log.d(TAG, "onCreate: Starting Game Menu.");
 
         Button backButton = (Button) findViewById(R.id.back_button);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "onClicked: Clicked Back.");
+                Log.d(TAG, "onClicked: Clicked backButton.");
 
                 //finish();   //kill Game Menu activity, back to Main Activity
 
@@ -44,21 +44,30 @@ public class GameMenu extends AppCompatActivity{
         game1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d(TAG, "onClick: Clicked game1Button.");
 
+                Intent intentGame1 = new Intent(GameMenu.this, Game1.class);
+                startActivity(intentGame1);
             }
         });
 
         game2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d(TAG, "onClick: Clicked game2Button.");
 
+                Intent intentGame2 = new Intent(GameMenu.this, Game2.class);
+                startActivity(intentGame2);
             }
         });
 
         game3Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d(TAG, "onClick: Clicked game3Button.");
 
+                Intent intentGame3 = new Intent(GameMenu.this, Game3.class);
+                startActivity(intentGame3);
             }
         });
 
