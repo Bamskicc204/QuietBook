@@ -38,7 +38,7 @@ public class GameMenu extends AppCompatActivity{
             public void onClick(View view) {
                 Log.d(TAG, "onClicked: Clicked backButton.");
 
-                //finish();   //kill Game Menu activity, back to Main Activity
+                finish();   //kill Game Menu activity, back to Main Activity
 
                 //method move to Main Activity
                 Intent intent = new Intent(GameMenu.this, MainActivity.class);
@@ -55,6 +55,7 @@ public class GameMenu extends AppCompatActivity{
             public void onClick(View view) {
                 Log.d(TAG, "onClick: Clicked game1Button.");
 
+                finish();
                 Intent intentGame1 = new Intent(GameMenu.this, Game1.class);
                 startActivity(intentGame1);
             }
@@ -65,6 +66,7 @@ public class GameMenu extends AppCompatActivity{
             public void onClick(View view) {
                 Log.d(TAG, "onClick: Clicked game2Button.");
 
+                finish();
                 Intent intentGame2 = new Intent(GameMenu.this, Game2.class);
                 startActivity(intentGame2);
             }
@@ -75,6 +77,7 @@ public class GameMenu extends AppCompatActivity{
             public void onClick(View view) {
                 Log.d(TAG, "onClick: Clicked game3Button.");
 
+                finish();
                 Intent intentGame3 = new Intent(GameMenu.this, Game3.class);
                 startActivity(intentGame3);
             }
