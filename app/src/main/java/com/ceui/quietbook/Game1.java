@@ -1,5 +1,6 @@
 package com.ceui.quietbook;
 
+import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -31,7 +32,8 @@ public class Game1 extends AppCompatActivity{
     int count = 9;
 
     private static final String TAG = "ToysCleanup";
-    
+
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,21 +48,6 @@ public class Game1 extends AppCompatActivity{
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
         Log.d(TAG, "onCreate: Starting Toys Cleanup Game.");
-
-        /*Button backButton1 = (Button) findViewById(R.id.back_button);
-
-        backButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d(TAG, "onClicked: Clicked backButton.");
-
-                finish();   //kill Game Menu activity, back to Main Activity
-
-                //back to Game Menu
-                Intent intentBack = new Intent(Game1.this, GameMenu.class);
-                startActivity(intentBack);
-            }
-        });*/
 
         shape01 = (ImageView) findViewById(R.id.shape01);
         shape02 = (ImageView) findViewById(R.id.shape02);
@@ -176,7 +163,7 @@ public class Game1 extends AppCompatActivity{
                         endView.setVisibility(View.VISIBLE);
                         count--;
                         if(count == 0){
-                            Toast toast = Toast.makeText(getApplicationContext(),"Yeay! All shape is found!",Toast.LENGTH_LONG);
+                            Toast toast = Toast.makeText(getApplicationContext(),"Yeay! All shapes are found!",Toast.LENGTH_LONG);
                             toast.setGravity(Gravity.CENTER,0,0);
                             toast.show();
                         }
