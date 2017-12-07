@@ -1,15 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/game3_background"
+    android:orientation="horizontal"
+    tools:context="com.ceui.quietbook.Game2"
+    android:baselineAligned="false">
 
-    <Button
-        android:id="@+id/back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="23dp"
-        android:text="Back" />
-</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/left_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/puzzle01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/puzzle01" />
+
+        <ImageView
+            android:id="@+id/puzzle02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/puzzle01"
+            android:layout_toEndOf="@+id/puzzle04"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/puzzle02" />
+
+        <ImageView
+            android:id="@+id/puzzle03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/puzzle09"
+            android:layout_alignTop="@+id/puzzle02"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/puzzle03" />
+
+        <ImageView
+            android:id="@+id/puzzle04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/puzzle01"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="9dp"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/puzzle04" />
+
+        <ImageView
+            android:id="@+id/puzzle05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/puzzle08"
+            android:layout_alignTop="@+id/puzzle04"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/puzzle05" />
+
+        <ImageView
+            android:id="@+id/puzzle06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/puzzle09"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/puzzle06" />
+
+        <ImageView
+            android:id="@+id/puzzle07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/puzzle04"
+            android:layout_alignTop="@+id/puzzle08"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/puzzle07" />
+
+        <ImageView
+            android:id="@+id/puzzle08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/puzzle09"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/puzzle08" />
+
+        <ImageView
+            android:id="@+id/puzzle09"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="18dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/puzzle09" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/right_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:id="@+id/grid_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="67dp"
+            android:layout_marginBottom="60dp"
+            android:layout_marginEnd="60dp"
+            android:columnCount="3"
+            android:rowCount="3"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:id="@+id/place01_layout"
+                android:background="@drawable/place300"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:gravity="center"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/place02_layout"
+                android:background="@drawable/place300"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:gravity="center"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/place03_layout"
+                android:background="@drawable/place300"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:gravity="center"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/place04_layout"
+                android:background="@drawable/place300"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/place05_layout"
+                android:background="@drawable/place300"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/place06_layout"
+                android:background="@drawable/place300"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/place07_layout"
+                android:background="@drawable/place300"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:gravity="center"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/place08_layout"
+                android:background="@drawable/place300"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:gravity="center"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/place09_layout"
+                android:background="@drawable/place300"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="2"
+                android:gravity="center"
+                android:orientation="horizontal">
+            </LinearLayout>
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>

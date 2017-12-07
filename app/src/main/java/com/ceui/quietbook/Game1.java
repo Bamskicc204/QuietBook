@@ -2,6 +2,7 @@ package com.ceui.quietbook;
 
 import android.annotation.SuppressLint;
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -166,11 +168,16 @@ public class Game1 extends AppCompatActivity{
                             Toast toast = Toast.makeText(getApplicationContext(),"Yeay! All shapes are found!",Toast.LENGTH_LONG);
                             toast.setGravity(Gravity.CENTER,0,0);
                             toast.show();
+                            finish();
+
+                            Intent intent = new Intent(Game1.this, GameMenu.class);
+                            startActivity(intent);
                         }
                         else{
                             Toast toast = Toast.makeText(getApplicationContext(),count + " shape(s) remaining",Toast.LENGTH_SHORT);
                             toast.setGravity(Gravity.CENTER,0,0);
                             toast.show();
+
                         }
                     }
                     else{
